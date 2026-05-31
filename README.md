@@ -15,6 +15,7 @@ Learn. Create. Grow.
 
 </body>
 style.css
+<link rel="stylesheet" href="style.css">
 
 </html>
 
