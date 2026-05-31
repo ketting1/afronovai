@@ -14,8 +14,7 @@ Learn. Create. Grow.
 </p>
 
 </body>
-style.css
-<link rel="stylesheet" href="style.css">
+
 
 </html>
 
