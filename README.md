@@ -8,7 +8,7 @@
 
 <body>
 
-    
+   <h1>AfroNova Hub</h1> 
 
     <p>Learn. Create. Grow.</p>
 
