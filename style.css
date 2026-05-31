@@ -28,4 +28,19 @@ button{
     border-radius:10px;
     font-size:1rem;
     cursor:pointer;
+} 
+nav{
+    padding:20px;
+    background:rgba(255,255,255,0.08);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    text-decoration:underline;
 }
