@@ -2,7 +2,8 @@
 <html>
 
 <head>
-<title>AfroNova Hub</title>
+<title>AfroNova Hub</title> 
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
