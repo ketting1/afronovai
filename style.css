@@ -22,13 +22,25 @@ p{
     font-size:1.3rem;
 }  
 button{
-    margin-top:20px;
-    padding:12px 24px;
-    border:none;
-    border-radius:10px;
-    font-size:1rem;
+    margin-top:25px;
+    padding:14px 30px;
+
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.1);
+    color:white;
+
+    backdrop-filter:blur(10px);
+
     cursor:pointer;
-} 
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    background:rgba(255,255,255,0.2);
+}
 nav{
     position:sticky;
     top:0;
