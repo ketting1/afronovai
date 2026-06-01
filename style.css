@@ -62,16 +62,18 @@ nav a{
     margin:0 15px;
     font-weight:600;
     transition:0.3s;
+ 
+
 }
 
 nav a:hover{
     color:#7dd3fc;
-}
+ text-decoration:underline;
+} 
+
     
 
-nav a:hover{
-    text-decoration:underline;
-} 
+
 .hero{
     min-height:80vh;
 
