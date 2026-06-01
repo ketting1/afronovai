@@ -137,4 +137,50 @@ nav a:hover{
 
 .card p{
     font-size:1rem;
+} 
+.search-section{
+    margin-top:80px;
+    text-align:center;
+}
+
+.search-section input{
+    width:80%;
+    max-width:600px;
+
+    padding:15px;
+
+    border:none;
+    border-radius:15px;
+
+    background:rgba(255,255,255,0.1);
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+    outline:none;
+}
+
+.resources{
+    width:90%;
+    max-width:1200px;
+
+    margin:80px auto;
+}
+
+.resources h2{
+    margin-bottom:30px;
+}
+
+.resource-card{
+    margin-bottom:20px;
+
+    padding:20px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    border-radius:20px;
+
+    backdrop-filter:blur(12px);
 }
