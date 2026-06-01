@@ -254,4 +254,20 @@ footer{
     background:rgba(255,255,255,.05);
 
     border-top:1px solid rgba(255,255,255,.1);
+} 
+.creators{
+    width:90%;
+    max-width:1200px;
+
+    margin:100px auto;
+
+    text-align:center;
+}
+
+.creators h2{
+    margin-bottom:20px;
+}
+
+.creators p{
+    margin-bottom:40px;
 }
