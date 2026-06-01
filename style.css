@@ -270,4 +270,32 @@ footer{
 
 .creators p{
     margin-bottom:40px;
+} 
+.ai-section{
+    width:90%;
+    max-width:900px;
+
+    margin:100px auto;
+
+    text-align:center;
+}
+
+.ai-section input{
+    width:80%;
+    max-width:600px;
+
+    padding:15px;
+
+    border:none;
+    border-radius:15px;
+
+    background:rgba(255,255,255,.1);
+
+    color:white;
+
+    margin-top:20px;
+}
+
+.ai-section button{
+    margin-top:20px;
 }
