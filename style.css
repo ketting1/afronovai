@@ -234,6 +234,23 @@ footer{
 
     border-top:1px solid rgba(255,255,255,.1);
 } 
+footer{
+    @media (max-width:768px){
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:8px;
+    }
+
+}
 .creators{
     width:90%;
     max-width:1200px;
@@ -307,3 +324,4 @@ input::placeholder{
     height:auto;
     margin-bottom:20px;
 }
+
