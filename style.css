@@ -99,8 +99,15 @@ nav a:hover{
     -webkit-backdrop-filter:blur(12px);
 
     transition:0.3s;
-}
+} 
 
+.card:hover{
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,0.12);
+
+    box-shadow:0 0 25px rgba(125,211,252,0.25);
+}
 
 
 .card h3{
