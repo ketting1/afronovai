@@ -48,7 +48,79 @@
 
 </section>
 
+function askAI(){
 
+    let question =
+    document.getElementById("userQuestion")
+    .value.toLowerCase();
+
+    let response =
+    document.getElementById("responseBox");
+
+    if(question === ""){
+
+        response.innerHTML =
+        "Please enter a question.";
+
+    }
+
+    else if(question.includes("what is ai")){
+
+        response.innerHTML =
+        "AI stands for Artificial Intelligence. It helps computers learn, solve problems, and assist humans.";
+
+    }
+
+    else if(question.includes("business")){
+
+        response.innerHTML =
+        "Business idea: Affiliate marketing, freelancing, content creation, AI services, and digital products.";
+
+    }
+
+    else if(question.includes("africa")){
+
+        response.innerHTML =
+        "Africa is becoming a major hub for technology, innovation, entrepreneurship, and digital growth.";
+
+    }
+
+    else if(question.includes("money")){
+
+        response.innerHTML =
+        "You can make money online through freelancing, affiliate marketing, content creation, and selling digital products.";
+
+    }
+
+    else if(question.includes("youtube")){
+
+        response.innerHTML =
+        "YouTube growth comes from consistent content, attractive thumbnails, strong titles, and audience engagement.";
+
+    }
+
+    else if(question.includes("tiktok")){
+
+        response.innerHTML =
+        "TikTok rewards short engaging videos with strong hooks in the first few seconds.";
+
+    }
+
+    else if(question.includes("learn")){
+
+        response.innerHTML =
+        "Focus on one skill at a time and practice every day. Small progress becomes big results.";
+
+    }
+
+    else{
+
+        response.innerHTML =
+        "AfroNova AI is still learning. Ask me about AI, business, money, Africa, YouTube, TikTok, or learning.";
+
+    }
+
+}
 
 </body>
 
