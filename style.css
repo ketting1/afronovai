@@ -469,8 +469,27 @@ body{
 .goog-te-combo{
     padding:8px;
     border-radius:10px;
+} 
+
+body{
+    animation: starsMove 60s linear infinite;
+
+    background:
+    radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 1px),
+    linear-gradient(to bottom,#000814,#001d3d,#003566);
+
+    background-size:30px 30px, auto;
 }
 
+@keyframes starsMove{
+    from{
+        background-position:0 0, 0 0;
+    }
+
+    to{
+        background-position:1000px 500px, 0 0;
+    }
+}
 
 
 body
