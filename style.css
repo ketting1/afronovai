@@ -491,7 +491,23 @@ body{
         background-position:1000px 500px, 0 0;
     }
 }
+.logo{
+    width:140px;
+    height:auto;
+    margin-bottom:20px;
 
+    filter:drop-shadow(0 0 10px #7dd3fc)
+           drop-shadow(0 0 25px #38bdf8);
+
+    transition:0.5s;
+}
+
+.logo:hover{
+    transform:scale(1.05);
+
+    filter:drop-shadow(0 0 20px #7dd3fc)
+           drop-shadow(0 0 50px #38bdf8);
+}
 
 body
     
