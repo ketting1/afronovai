@@ -351,15 +351,9 @@ footer{
     padding:10px 20px;
 }
 
-.goog-te-gadget{
-    color:white !important;
-}
 
-.goog-te-combo{
-    padding:8px;
-    border-radius:10px;
-    border:none;
-} 
+
+
 .language-bar{
     display:flex;
     justify-content:center;
