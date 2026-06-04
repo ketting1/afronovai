@@ -395,6 +395,40 @@ footer{
 
 .language-bar button:hover{
     transform:translateY(-2px);
+} 
+.language-bar{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+
+    padding:12px;
+
+    background:rgba(255,255,255,0.05);
+
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.language-bar button{
+    padding:8px 16px;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    border-radius:12px;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.language-bar button:hover{
+    transform:translateY(-3px);
+
+    background:rgba(255,255,255,0.15);
 }
 input{
     width:80%;
