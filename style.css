@@ -68,7 +68,18 @@ nav a{
 }
 
 
+nav a:hover{
+    color:#7dd3fc;
 
+    text-decoration:none;
+
+    text-shadow:
+        0 0 10px #7dd3fc,
+        0 0 20px #38bdf8,
+        0 0 40px #38bdf8;
+
+    transition:0.3s;
+}
 
 
 .cards{
