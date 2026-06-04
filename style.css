@@ -463,17 +463,11 @@ input::placeholder{
     display:none;
 } 
 .goog-te-banner-frame{
-    display:none !important;
-}
-
-.goog-te-gadget{
-    display:none !important;
-}
+    display:n
 
 
 
 body{
-    top:0 !important;
-}
+    
 
 
