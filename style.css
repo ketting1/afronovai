@@ -459,5 +459,8 @@ input::placeholder{
     height:auto;
     margin-bottom:20px;
 } 
+.goog-te-combo{
+    display:none;
+}
 
 
