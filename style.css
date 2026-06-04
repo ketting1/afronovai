@@ -57,7 +57,16 @@ nav{
     box-shadow:0 8px 32px rgba(0,0,0,0.2);
 }
 
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:600;
+    transition:0.3s;
 
+    padding:8px 12px;
+    border-radius:10px;
+}
 
 
 nav a:hover{
