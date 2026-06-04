@@ -47,7 +47,56 @@
 </div>
 
 </section>
+<script>
 
+function askAI(){
+
+    let question =
+    document.getElementById("userQuestion")
+    .value;
+
+    let responseBox =
+    document.getElementById("responseBox");
+
+    let answer = "";
+
+    if(question.toLowerCase().includes("what is ai")){
+
+        answer =
+        "AI stands for Artificial Intelligence. It helps computers learn and solve problems.";
+
+    }
+
+    else if(question.toLowerCase().includes("business")){
+
+        answer =
+        "Business idea: Affiliate marketing, freelancing, content creation, AI services, and digital products.";
+
+    }
+
+    else if(question.toLowerCase().includes("africa")){
+
+        answer =
+        "Africa is becoming a major hub for technology, innovation, and entrepreneurship.";
+
+    }
+
+    else{
+
+        answer =
+        "AfroNova AI is still learning. Try asking about AI, business, or Africa.";
+
+    }
+
+    responseBox.innerHTML +=
+    "<p><b>You:</b> " + question + "</p>" +
+    "<p><b>AfroNova AI:</b> " + answer + "</p><hr>";
+
+    document.getElementById("userQuestion").value="";
+
+}
+
+</script>
 </body>
 
 </html>
