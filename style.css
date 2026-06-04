@@ -345,6 +345,10 @@ footer{
 
 .ai-section button{
     margin-top:20px;
+} 
+#google_translate_element{
+    text-align:right;
+    padding:10px 20px;
 }
 input{
     width:80%;
@@ -374,5 +378,6 @@ input::placeholder{
     width:140px;
     height:auto;
     margin-bottom:20px;
-}
+} 
+
 
