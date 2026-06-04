@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title>AfroNova AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="ai-tools.html">AI Tools</a>
+    <a href="learning.html">Learning</a>
+    <a href="marketplace.html">Marketplace</a>
+    <a href="afronova-ai.html">AfroNova AI</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<section class="hero">
+
+    <h2>🤖 AfroNova AI</h2>
+
+    <h1>Your African AI Assistant</h1>
+
+    <p>
+        Ask about AI, business, learning,
+        technology, Africa, entrepreneurship,
+        and digital opportunities.
+    </p>
+
+    <input
+        type="text"
+        id="userQuestion"
+        placeholder="Ask AfroNova AI..."
+    >
+
+    <br>
+
+    <button onclick="askAI()">
+        Ask AfroNova AI
+    </button>
+
+    <div class="card" id="responseBox"
+         style="margin-top:30px; max-width:800px;">
+        AfroNova AI is ready.
+    </div>
+
+</section>
+
+<script>
+
+function askAI(){
+
+    let question =
+    document.getElementById("userQuestion").value;
+
+    let response =
+    document.getElementById("responseBox");
+
+    if(question === ""){
+
+        response.innerHTML =
+        "Please enter a question.";
+
+    }else{
+
+        response.innerHTML =
+        "You asked: <br><br>" +
+        question +
+        "<br><br> AfroNova AI integration coming soon.";
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
