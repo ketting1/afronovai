@@ -178,7 +178,16 @@ nav a:hover{
     font-size:1.3rem;
     opacity:.8;
 }
+.hero h1{
+    font-size:4rem;
+    max-width:900px;
 
+    text-shadow:
+        0 0 10px rgba(255,255,255,.8),
+        0 0 20px #7dd3fc,
+        0 0 40px #7dd3fc,
+        0 0 80px #38bdf8;
+}
 
 
 .hero p{
