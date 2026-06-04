@@ -461,6 +461,21 @@ input::placeholder{
 } 
 .goog-te-combo{
     display:none;
+} 
+.goog-te-banner-frame{
+    display:none !important;
+}
+
+.goog-te-gadget{
+    display:none !important;
+}
+
+#google_translate_element{
+    display:none !important;
+}
+
+body{
+    top:0 !important;
 }
 
 
