@@ -349,6 +349,20 @@ footer{
 #google_translate_element{
     text-align:right;
     padding:10px 20px;
+} 
+#google_translate_element{
+    text-align:right;
+    padding:10px 20px;
+}
+
+.goog-te-gadget{
+    color:white !important;
+}
+
+.goog-te-combo{
+    padding:8px;
+    border-radius:10px;
+    border:none;
 }
 input{
     width:80%;
