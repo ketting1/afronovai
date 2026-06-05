@@ -227,6 +227,34 @@ else if(question.toLowerCase().includes("business idea")){
     ideas[Math.floor(Math.random() * ideas.length)];
 
 
+    
+else if(question.toLowerCase().includes("my name is")){
+
+    userName =
+    question.replace(/my name is/i,"").trim();
+
+    answer =
+    "Nice to meet you, " + userName + "!";
+
+}
+
+else if(question.toLowerCase().includes("who am i")){
+
+    if(userName === ""){
+
+        answer =
+        "I do not know your name yet. Tell me by saying: My name is ...";
+
+    }
+
+    else{
+
+        answer =
+        "Your name is " + userName + ".";
+
+    }
+
+}
 
 }
     else{
