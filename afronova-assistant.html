@@ -84,7 +84,23 @@ window.onload = function(){
         userGoal + "</p>";
 
     }
+let quotes = [
 
+"Success comes from consistency.",
+"Small daily progress creates big results.",
+"Your future is built by what you do today.",
+"Every expert was once a beginner.",
+"Keep learning. Keep building. Keep growing."
+
+];
+
+let randomQuote =
+quotes[Math.floor(Math.random() * quotes.length)];
+
+responseBox.innerHTML +=
+"<p><b>💡 Daily Motivation:</b> " +
+randomQuote +
+"</p>";
 };
 
 function askAI(){
