@@ -95,7 +95,20 @@ function askAI(){
         "AfroNova AI is still learning. Try asking about AI, business, or Africa.";
 
     }
+responseBox.innerHTML +=
+'<div class="chat-user">👤 You: ' +
+question +
+'</div>';
 
+responseBox.innerHTML +=
+'<div class="chat-ai" id="thinking">🤖 AfroNova AI is thinking...</div>';
+
+setTimeout(function(){
+
+document.getElementById("thinking").innerHTML =
+'🤖 AfroNova AI: ' + answer;
+
+},1000);
     
 responseBox.scrollTop =
 responseBox.scrollHeight;
