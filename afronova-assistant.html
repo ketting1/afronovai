@@ -61,7 +61,33 @@
 <script>
 let userName = "";
 let userGoal = "";
-    
+    else if(question.toLowerCase().includes("my goal is")){
+
+    userGoal =
+    question.replace(/my goal is/i,"").trim();
+
+    answer =
+    "Excellent goal! I will remember that your goal is: " + userGoal;
+
+}
+
+else if(question.toLowerCase().includes("what is my goal")){
+
+    if(userGoal === ""){
+
+        answer =
+        "You have not told me your goal yet. Try saying: My goal is ...";
+
+    }
+
+    else{
+
+        answer =
+        "Your goal is: " + userGoal;
+
+    }
+
+} 
           function askAI(){
 
     let question =
