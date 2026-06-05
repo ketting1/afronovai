@@ -59,10 +59,35 @@
 </section>
 
 <script>
+<script>
+
 let userName = localStorage.getItem("userName") || "";
 let userGoal = localStorage.getItem("userGoal") || "";
-    
-          function askAI(){
+
+window.onload = function(){
+
+    let responseBox =
+    document.getElementById("responseBox");
+
+    if(userName !== ""){
+
+        responseBox.innerHTML +=
+        "<p><b>🤖 Welcome back:</b> " +
+        userName + "</p>";
+
+    }
+
+    if(userGoal !== ""){
+
+        responseBox.innerHTML +=
+        "<p><b>🎯 Goal:</b> " +
+        userGoal + "</p>";
+
+    }
+
+};
+
+function askAI(){
 
     let question =
     document.getElementById("userQuestion").value;
