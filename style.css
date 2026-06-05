@@ -517,7 +517,21 @@ body{
            drop-shadow(0 0 50px #38bdf8);
 }
 
+.chat-user{
+    background:rgba(56,189,248,0.25);
+    padding:12px;
+    border-radius:15px;
+    margin:10px 0;
+    text-align:right;
+}
 
+.chat-ai{
+    background:rgba(255,255,255,0.08);
+    padding:12px;
+    border-radius:15px;
+    margin:10px 0;
+    text-align:left;
+}
     
 
 
