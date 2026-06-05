@@ -198,6 +198,39 @@ else if(question.toLowerCase().includes("learn")){
 
     answer =
     "The fastest way to learn is to practice every day and build real projects.";
+else if(question.toLowerCase().includes("motivation")){
+
+    let quotes = [
+
+    "Success comes from consistency.",
+    "Small daily progress creates big results.",
+    "Your future is built by what you do today.",
+    "Every expert was once a beginner.",
+    "Keep learning. Keep building. Keep growing."
+
+    ];
+
+    answer =
+    quotes[Math.floor(Math.random() * quotes.length)];
+
+}
+
+else if(question.toLowerCase().includes("business idea")){
+
+    let ideas = [
+
+    "Start an affiliate marketing website.",
+    "Create a YouTube channel around AI tools.",
+    "Offer freelance services online.",
+    "Sell digital products such as ebooks.",
+    "Build a niche blog and monetize it."
+
+    ];
+
+    answer =
+    ideas[Math.floor(Math.random() * ideas.length)];
+
+}
 
 }
     else{
