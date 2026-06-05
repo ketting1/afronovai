@@ -218,7 +218,13 @@ else if(question.toLowerCase().includes("business idea")){
     
 else if(question.toLowerCase().includes("my name is")){
 
-    
+    userName =
+question.replace(/my name is/i,"").trim();
+
+localStorage.setItem("userName", userName);
+
+answer =
+"Nice to meet you, " + userName + "!";
 
 }
     
