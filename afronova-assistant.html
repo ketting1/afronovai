@@ -230,7 +230,13 @@ answer =
     
 else if(question.toLowerCase().includes("my goal is")){
 
-    
+   userGoal =
+question.replace(/my goal is/i,"").trim();
+
+localStorage.setItem("userGoal", userGoal);
+
+answer =
+"Excellent goal! I will remember that your goal is: " + userGoal; 
     
 
 }
