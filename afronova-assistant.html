@@ -210,7 +210,26 @@ function askAI(){
         answer =
         "Africa is becoming a major hub for technology, innovation, and entrepreneurship.";
 
-    }
+    } 
+        else if(question.toLowerCase().includes("african business")){
+
+    let businesses = [
+
+    "Start an online African products store.",
+    "Create an AI content agency.",
+    "Build a tourism and travel website.",
+    "Sell digital products online.",
+    "Start a social media marketing service.",
+    "Create an African education platform.",
+    "Build a local business directory.",
+    "Start affiliate marketing around finance or technology."
+
+    ];
+
+    answer =
+    businesses[Math.floor(Math.random() * businesses.length)];
+
+}
 
     else if(question.toLowerCase().includes("website")){
 
