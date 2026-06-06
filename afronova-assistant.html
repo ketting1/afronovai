@@ -365,7 +365,14 @@ else if(question.toLowerCase().includes("forget everything")){
     responseBox.scrollHeight;
 
     document.getElementById("userQuestion").value = "";
+function quickQuestion(text){
 
+    document.getElementById("userQuestion").value =
+    text;
+
+    askAI();
+
+}
 }
 
 </script>
