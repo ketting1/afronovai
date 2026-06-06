@@ -70,7 +70,32 @@
 
 <button onclick="quickQuestion('forget everything')">
 🗑 Forget Memory
+</button> 
+    <div class="button-container">
+
+<button onclick="askAI()">Ask AfroNova AI</button>
+
+<button onclick="quickQuestion('business idea')">
+💰 Business Idea
 </button>
+
+<button onclick="quickQuestion('youtube')">
+🎥 YouTube Tips
+</button>
+
+<button onclick="quickQuestion('tiktok')">
+📱 TikTok Tips
+</button>
+
+<button onclick="quickQuestion('motivation')">
+🔥 Motivation
+</button>
+
+<button onclick="quickQuestion('money plan')">
+💵 Money Plan
+</button>
+
+</div>
 
     <div class="card"
          id="responseBox"
@@ -131,7 +156,17 @@ responseBox.innerHTML +=
 "<p><b>💡 Daily Motivation:</b> " +
 randomQuote +
 "</p>";
-};
+}; 
+    button{
+    margin:5px;
+}
+
+.button-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
 
 function askAI(){
 
