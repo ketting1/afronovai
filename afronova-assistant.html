@@ -214,7 +214,8 @@ function askAI(){
         answer =
         "A successful website should have useful content, attractive design, and clear navigation.";
 
-    }
+    } 
+        
 
     else if(question.toLowerCase().includes("affiliate")){
 
@@ -228,7 +229,24 @@ function askAI(){
         answer =
         "Freelancing lets you earn income by offering skills such as writing, design, coding, or marketing.";
 
-    }
+    } 
+        
+       else if(question.toLowerCase().includes("ai tool")){
+
+    let tools = [
+
+    "ChatGPT for writing and ideas.",
+    "Canva AI for graphics.",
+    "CapCut AI for videos.",
+    "ElevenLabs for voiceovers.",
+    "Pika for AI videos."
+
+    ];
+
+    answer =
+    tools[Math.floor(Math.random() * tools.length)];
+
+} 
 
     else if(question.toLowerCase().includes("chatgpt")){
 
