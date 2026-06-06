@@ -206,7 +206,27 @@ function askAI(){
         answer =
         "Business idea: Affiliate marketing, freelancing, content creation, AI services, and digital products.";
 
-    }
+    } 
+
+        else if(question.toLowerCase().includes("freelance idea")){
+
+    let freelanceIdeas = [
+
+    "Offer website design services.",
+    "Become a social media manager.",
+    "Create AI-generated content for businesses.",
+    "Offer logo and graphic design services.",
+    "Become a virtual assistant.",
+    "Provide video editing services.",
+    "Offer copywriting and blog writing.",
+    "Build websites for local businesses."
+
+    ];
+
+    answer =
+    freelanceIdeas[Math.floor(Math.random() * freelanceIdeas.length)];
+
+}
 
     else if(question.toLowerCase().includes("africa")){
 
