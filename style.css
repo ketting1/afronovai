@@ -38,7 +38,15 @@ button{
     transition:0.3s;
 }
 
+button:hover{
+    transform:translateY(-3px);
 
+    background:rgba(255,255,255,0.2);
+
+    box-shadow:
+    0 0 10px #7dd3fc,
+    0 0 20px #38bdf8;
+}
 nav{
     position:sticky;
     top:0;
