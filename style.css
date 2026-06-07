@@ -617,4 +617,22 @@ body{
     box-shadow:
     0 0 20px rgba(125,211,252,0.3),
     0 0 40px rgba(56,189,248,0.2);
+} 
+.prayer-times{
+    width:90%;
+    max-width:800px;
+
+    margin:80px auto;
+}
+
+.prayer-times .card{
+    text-align:center;
+}
+
+.prayer-times h2{
+    margin-bottom:20px;
+}
+
+.prayer-times p{
+    margin:12px 0;
 }
