@@ -378,7 +378,27 @@ function updateClock(){
 
 } 
             
+function updateWorldClocks(){
 
+    document.getElementById("melbourneClock").innerHTML =
+    new Date().toLocaleTimeString(
+        "en-AU",
+        {timeZone:"Australia/Melbourne"}
+    );
+
+    document.getElementById("dakarClock").innerHTML =
+    new Date().toLocaleTimeString(
+        "en-GB",
+        {timeZone:"Africa/Dakar"}
+    );
+
+    document.getElementById("makkahClock").innerHTML =
+    new Date().toLocaleTimeString(
+        "en-GB",
+        {timeZone:"Asia/Riyadh"}
+    );
+
+}
 setInterval(updateClock,1000);
 
 updateClock();
