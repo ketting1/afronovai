@@ -202,7 +202,29 @@ nav a:hover{
         0 0 80px #38bdf8;
 }
 
+.hero h1{
+    animation: glow 3s ease-in-out infinite;
+}
 
+@keyframes glow{
+
+    0%{
+        text-shadow:
+        0 0 10px #7dd3fc;
+    }
+
+    50%{
+        text-shadow:
+        0 0 25px #38bdf8,
+        0 0 50px #38bdf8;
+    }
+
+    100%{
+        text-shadow:
+        0 0 10px #7dd3fc;
+    }
+
+}
 .hero p{
     max-width:700px;
     line-height:1.8;
