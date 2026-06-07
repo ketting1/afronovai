@@ -296,7 +296,25 @@ function googleTranslateElementInit() {
         <div class="card">
     <h2>🕒 Current Time</h2>
     <p id="clock"></p>
-</div>
+</div> 
+        <script>
+
+function updateClock(){
+
+    let now = new Date();
+
+    let time = now.toLocaleTimeString();
+
+    document.getElementById("clock").innerHTML =
+    time;
+
+}
+
+setInterval(updateClock,1000);
+
+updateClock();
+
+</script>
         
 </body>
 
