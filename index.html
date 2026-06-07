@@ -395,7 +395,48 @@ function updateWorldClocks(){
         "en-AU",
         {timeZone:"Australia/Melbourne"}
     );
+function updateNextPrayer(){
 
+    let now = new Date();
+
+    let hour = now.getHours();
+
+    let text = "";
+
+    if(hour < 5){
+
+        text = "🌅 Next Prayer: Fajr";
+
+    }
+
+    else if(hour < 12){
+
+        text = "☀️ Next Prayer: Dhuhr";
+
+    }
+
+    else if(hour < 15){
+
+        text = "🌤 Next Prayer: Asr";
+
+    }
+
+    else if(hour < 18){
+
+        text = "🌇 Next Prayer: Maghrib";
+
+    }
+
+    else{
+
+        text = "🌙 Next Prayer: Isha";
+
+    }
+
+    document.getElementById("nextPrayer").innerHTML =
+    text;
+
+}
     document.getElementById("dakarClock").innerHTML =
     new Date().toLocaleTimeString(
         "en-GB",
