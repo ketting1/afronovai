@@ -381,13 +381,11 @@ function updateClock(){
 
     let now = new Date();
 
-    let time = now.toLocaleTimeString();
-
     document.getElementById("clock").innerHTML =
-    time;
+    now.toLocaleTimeString();
 
-} 
-            
+}
+
 function updateWorldClocks(){
 
     document.getElementById("melbourneClock").innerHTML =
@@ -395,48 +393,7 @@ function updateWorldClocks(){
         "en-AU",
         {timeZone:"Australia/Melbourne"}
     );
-function updateNextPrayer(){
 
-    let now = new Date();
-
-    let hour = now.getHours();
-
-    let text = "";
-
-    if(hour < 5){
-
-        text = "🌅 Next Prayer: Fajr";
-
-    }
-
-    else if(hour < 12){
-
-        text = "☀️ Next Prayer: Dhuhr";
-
-    }
-
-    else if(hour < 15){
-
-        text = "🌤 Next Prayer: Asr";
-
-    }
-
-    else if(hour < 18){
-
-        text = "🌇 Next Prayer: Maghrib";
-
-    }
-
-    else{
-
-        text = "🌙 Next Prayer: Isha";
-
-    }
-
-    document.getElementById("nextPrayer").innerHTML =
-    text;
-
-}
     document.getElementById("dakarClock").innerHTML =
     new Date().toLocaleTimeString(
         "en-GB",
@@ -450,14 +407,52 @@ function updateNextPrayer(){
     );
 
 }
+
+function updateNextPrayer(){
+
+    let hour = new Date().getHours();
+
+    let text = "";
+
+    if(hour < 5){
+
+        text = "🌅 Next Prayer: Fajr";
+
+    }else if(hour < 12){
+
+        text = "☀️ Next Prayer: Dhuhr";
+
+    }else if(hour < 15){
+
+        text = "🌤 Next Prayer: Asr";
+
+    }else if(hour < 18){
+
+        text = "🌇 Next Prayer: Maghrib";
+
+    }else{
+
+        text = "🌙 Next Prayer: Isha";
+
+    }
+
+    document.getElementById("nextPrayer").innerHTML = text;
+
+}
+
 setInterval(updateClock,1000);
 setInterval(updateWorldClocks,1000);
+setInterval(updateNextPrayer,1000);
 
 updateClock();
 updateWorldClocks();
+updateNextPrayer();
 
 </script>
-        
+            
+
+
+    
 </body>
 
 
