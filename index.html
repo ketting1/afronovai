@@ -590,7 +590,50 @@ function updateNextPrayer(){
 
     document.getElementById("nextPrayer").innerHTML = text;
 
+} 
+            const aiNewsList = [
+"AI is changing education worldwide.",
+"New AI tools help creators work faster.",
+"Automation is growing across industries."
+];
+
+const africaNewsList = [
+"African startups attract new investors.",
+"Technology hubs continue expanding.",
+"Digital innovation is accelerating."
+];
+
+const businessNewsList = [
+"Online businesses continue growing.",
+"Affiliate marketing gains popularity.",
+"Freelancing opportunities are increasing."
+];
+
+const islamicNewsList = [
+"Islamic education reaches more students online.",
+"Digital Quran learning expands globally.",
+"New Islamic knowledge platforms are emerging."
+];
+
+function updateNews(){
+
+document.getElementById("aiNews").innerHTML =
+aiNewsList[Math.floor(Math.random()*aiNewsList.length)];
+
+document.getElementById("africaNews").innerHTML =
+africaNewsList[Math.floor(Math.random()*africaNewsList.length)];
+
+document.getElementById("businessNews").innerHTML =
+businessNewsList[Math.floor(Math.random()*businessNewsList.length)];
+
+document.getElementById("islamicNews").innerHTML =
+islamicNewsList[Math.floor(Math.random()*islamicNewsList.length)];
+
 }
+
+updateNews();
+
+setInterval(updateNews,10000);
 
 setInterval(updateClock,1000);
 setInterval(updateWorldClocks,1000);
