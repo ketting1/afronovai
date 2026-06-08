@@ -396,6 +396,67 @@ function googleTranslateElementInit() {
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
     
 </script> 
+        const countries = [
+
+{
+flag:"🇸🇳",
+name:"Senegal",
+capital:"Dakar",
+fact:"Known for hospitality, culture, and innovation."
+},
+
+{
+flag:"🇳🇬",
+name:"Nigeria",
+capital:"Abuja",
+fact:"Africa's largest population and major technology hub."
+},
+
+{
+flag:"🇰🇪",
+name:"Kenya",
+capital:"Nairobi",
+fact:"Leader in mobile banking and digital innovation."
+},
+
+{
+flag:"🇿🇦",
+name:"South Africa",
+capital:"Pretoria",
+fact:"One of Africa's most industrialized economies."
+},
+
+{
+flag:"🇲🇦",
+name:"Morocco",
+capital:"Rabat",
+fact:"Famous for history, trade, and renewable energy projects."
+}
+
+];
+
+function updateCountry(){
+
+let random =
+Math.floor(Math.random() * countries.length);
+
+let country = countries[random];
+
+document.getElementById("countryFlag").innerHTML =
+country.flag;
+
+document.getElementById("countryName").innerHTML =
+country.name;
+
+document.getElementById("countryCapital").innerHTML =
+"Capital: " + country.capital;
+
+document.getElementById("countryFact").innerHTML =
+country.fact;
+
+}
+
+updateCountry();
     
         <script>
 
