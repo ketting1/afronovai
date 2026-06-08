@@ -654,4 +654,13 @@ body{
     width:90%;
     max-width:900px;
     margin:80px auto;
+} 
+.news-feed{
+    width:90%;
+    max-width:1200px;
+    margin:80px auto;
+}
+
+.news-feed h2{
+    margin-bottom:30px;
 }
