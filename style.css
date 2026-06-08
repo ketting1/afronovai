@@ -649,4 +649,9 @@ body{
 
 .featured-country h3{
     font-size:2rem;
+} 
+.impact-section{
+    width:90%;
+    max-width:900px;
+    margin:80px auto;
 }
