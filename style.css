@@ -635,4 +635,18 @@ body{
 
 .prayer-times p{
     margin:12px 0;
+} 
+.featured-country{
+    width:90%;
+    max-width:800px;
+    margin:60px auto;
+}
+
+.featured-country h1{
+    font-size:4rem;
+    margin:10px 0;
+}
+
+.featured-country h3{
+    font-size:2rem;
 }
