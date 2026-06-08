@@ -460,7 +460,652 @@ function googleTranslateElementInit() {
         'google_translate_element'
     );
 }
+</script> 
+        <!DOCTYPE html>
+<html>
+
+<head>
+    <title>AfroNova Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+const text = "Learn. Create. Build The Future.";
+let i = 0;
+
+function typeWriter() {
+    if (i < text.length) {
+        document.getElementById("typing-title").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 80);
+    }
+}
+
+window.onload = typeWriter;
 </script>
+
+    <body>
+
+<div id="google_translate_element"></div>
+
+<div class="language-bar"> 
+    
+
+ <button onclick="alert('English selected')">🇬🇧 English</button>
+
+    <button onclick="alert('Français sélectionné')">🇫🇷 Français</button>
+
+    <button onclick="alert('العربية')">🇸🇦 العربية</button>
+
+    <button onclick="alert('Português selecionado')">🇵🇹 Português</button>
+
+    <button onclick="alert('Kiswahili selected')">🇰🇪 Kiswahili</button>
+
+    <button onclick="alert('Wolof selected')">🇸🇳 Wolof</button>
+
+</div>
+<nav>
+
+    <a href="index.html">Home</a>
+    <a href="ai-tools.html">AI Tools</a>
+    <a href="learning.html">Learning</a>
+    <a href="marketplace.html">Marketplace</a>
+    <a href="afronova-assistant.html">AfroNova AI</a>
+    <a href="contact.html">Contact</a>
+
+</nav>
+
+    <section class="hero">
+
+    <img src="logo.png" alt="AfroNova Hub Logo" class="logo">
+
+    <h2>🌍 AfroNova Hub</h2>
+
+    <h1 id="typing-title"></h1>
+
+    <p>
+        Empowering Africa and the world through knowledge,
+        technology, AI innovation, entrepreneurship,
+        and digital opportunities.
+    </p>
+
+    <div class="hero-buttons">
+
+    <a href="learning.html">
+        <button>🚀 Explore Resources</button>
+    </a>
+
+    <a href="contact.html">
+        <button>👥 Join Community</button>
+    </a>
+
+</div>
+
+</section>
+<div class="dashboard">
+
+    <div class="card">
+        <h2>📘 Learning</h2>
+        <p>Learn HTML, CSS, JavaScript, AI, and digital skills.</p>
+    </div>
+
+    <div class="card">
+        <h2>🌍 Africa</h2>
+        <p>Explore African culture, innovation, opportunities, and history.</p>
+    </div>
+
+    <div class="card">
+        <h2>⚡ Technology</h2>
+        <p>Discover AI tools, automation, coding, and future technology.</p>
+    </div>
+
+    <div class="card">
+        <h2>💼 Business</h2>
+        <p>Business ideas, affiliate marketing, freelancing, and online income.</p>
+    </div>
+
+</div> 
+        <section class="stats">
+
+    <div class="stat">
+        <h2>100+</h2>
+        <p>AI Tools</p>
+    </div>
+
+    <div class="stat">
+        <h2>50+</h2>
+        <p>Learning Resources</p>
+    </div>
+
+    <div class="stat">
+        <h2>20+</h2>
+        <p>Business Guides</p>
+    </div>
+
+    <div class="stat">
+        <h2>54</h2>
+        <p>African Countries</p>
+    </div>
+
+</section> 
+        <section class="clock-section">
+
+    <div class="card">
+
+        <h2>🕒 Current Time</h2>
+
+        <h1 id="clock"></h1>
+
+    </div> 
+            
+<section class="world-clocks">
+
+    <div class="card">
+
+        <h2>🌍 World Clocks</h2>
+
+        <p>
+            🇦🇺 Melbourne:
+            <span id="melbourneClock"></span>
+        </p>
+
+        <p>
+            🇸🇳 Dakar:
+            <span id="dakarClock"></span>
+        </p>
+
+        <p>
+            🇸🇦 Makkah:
+            <span id="makkahClock"></span>
+        </p>
+
+    </div>
+
+
+</section> 
+            <section class="featured-country">
+
+    <div class="card">
+
+        <h2>🌍 Featured African Country</h2>
+
+        <h1 id="countryFlag">🇸🇳</h1>
+
+        <h3 id="countryName">Senegal</h3>
+
+        <p id="countryCapital">
+            Capital: Dakar
+        </p>
+
+        <p id="countryFact">
+            Home to vibrant culture, innovation,
+            and one of West Africa's fastest-growing economies.
+        </p>
+
+    </div>
+
+</section> 
+            <section class="impact-section">
+
+    <div class="card">
+
+        <h2>🌍 AfroNova Impact</h2>
+
+        <h1>54 African Countries</h1>
+
+        <p>
+            Connecting knowledge, innovation,
+            business, AI and opportunities
+            across Africa.
+        </p>
+
+        <h3>
+            👥 Visitors:
+            <span id="visitorCount">1000</span>
+        </h3>
+
+    </div>
+
+</section> 
+            <section class="news-feed">
+
+    <h2>📰 AfroNova News Feed</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🤖 AI News</h3>
+            <p id="aiNews">
+                New AI innovations are transforming education and business.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🌍 Africa News</h3>
+            <p id="africaNews">
+                African startups continue attracting global investment.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💼 Business News</h3>
+            <p id="businessNews">
+                Digital entrepreneurship is growing across Africa.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🕌 Islamic News</h3>
+            <p id="islamicNews">
+                Islamic educational initiatives continue expanding globally.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<section class="announcement">
+
+    <p>
+        🚀 New: Discover AI tools, business opportunities,
+        learning resources, and creator communities all in one place.
+    </p>
+
+</section>
+    
+     <section class="cards">
+
+    <div class="card">
+       
+        
+    <h3>🤖 AI Tools</h3>
+        <p>Explore the best AI tools for creators and entrepreneurs. 
+        </p> 
+        <a href="ai-tools.html">
+    <button>Open</button>
+</a>
+    </div>
+
+    <div class="card">
+        <h3>📚 Learning</h3>
+        <p>Free resources, guides, and tutorials.</p> 
+        <a href="learning.html">
+        <button>Open</button>
+    </a>
+    </div>
+
+    <div class="card">
+
+    <h3>💼 Business</h3>
+
+    <p>
+        Freelancing, affiliate marketing,
+        online business ideas, digital products,
+        and income opportunities.
+    </p>
+
+    <a href="learning.html">
+        <button>Open</button>
+    </a>
+
+</div> 
+         
+<div class="card">
+
+    <h3>🌍 Africa</h3>
+
+    <p>
+        Innovation, technology, culture,
+        entrepreneurship, and opportunities
+        across Africa.
+    </p>
+
+    <a href="learning.html">
+        <button>Open</button>
+    </a>
+
+</div>
+</section>
+        
+    <section class="marketplace">
+
+        <h2>Knowledge Marketplace</h2>
+
+        <p>
+            Learn from experts, creators, entrepreneurs,
+            developers, and innovators.
+        </p> 
+        
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>🤖 AI & Automation</h3>
+                <p>Guides, prompts, tools, and tutorials.</p> 
+                <a href="learning.html">
+        <button>Open</button>
+    </a>
+            </div>
+
+            <div class="card">
+                <h3>💼 Business & Freelancing</h3>
+                <p>Grow income and digital skills.</p> 
+                <a href="marketplace.html">
+    <button>Open</button>
+</a>
+            </div>
+
+            <div class="card">
+                <h3>📚 Education</h3>
+                <p>Courses and practical learning resources.</p> 
+                <a href="marketplace.html">
+    <button>Open</button>
+</a>
+            </div>
+
+            <div class="card">
+                <h3>🌍 African Innovation</h3>
+                <p>Ideas and opportunities across Africa.</p> 
+                <a href="marketplace.html">
+    <button>Open</button>
+</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="creators">
+
+    <h2>Featured Creators</h2>
+
+    <p>
+        Connect with experts, teachers, entrepreneurs,
+        and innovators from around the world.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>👤 Amina</h3>
+            <p>AI Specialist</p> 
+            <a href="contact.html">
+    <button>Connect</button>
+</a>
+        </div>
+
+        <div class="card">
+            <h3>👤 Ibrahim</h3>
+            <p>Business Mentor</p> 
+            <a href="contact.html">
+    <button>Connect</button>
+</a>
+        </div>
+
+        <div class="card">
+            <h3>👤 Fatou</h3>
+            <p>Digital Creator</p> 
+            <a href="contact.html">
+    <button>Connect</button>
+</a>
+        </div>
+
+    </div>
+<section class="ai-section">
+
+    <h2>🤖 Ask AfroNova AI</h2>
+
+    <p>
+        Ask questions about AI, business,
+        learning, technology, and opportunities.
+    </p>
+
+    <input
+        type="text"
+        placeholder="Ask AfroNova AI anything..."
+    >
+
+    <a href="afronova-assistant.html">
+        <button>Ask AI</button>
+    </a>
+
+</section>
+
+        
+            <section class="prayer-times">
+
+    <div class="card">
+
+        <h2>🕌 Prayer Times</h2>
+
+        <p>🌅 Fajr — 5:10 AM</p>
+
+        <p>☀️ Dhuhr — 12:30 PM</p>
+
+        <p>🌤 Asr — 3:45 PM</p>
+
+        <p>🌇 Maghrib — 6:15 PM</p>
+
+        <p>🌙 Isha — 7:45 PM</p>
+
+        <hr>
+
+        <h3 id="nextPrayer">
+            ⏳ Calculating...
+        </h3>
+
+    </div> 
+                
+ 
+    <footer>
+    <h3>🌍 AfroNova Hub</h3>
+    <p>Learn • Create • Grow • Build The Future</p>
+</footer> 
+        
+        
+ 
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+        {
+            pageLanguage: 'en'
+        },
+        'google_translate_element'
+    );
+}
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    
+</script> 
+        const countries = [
+
+{
+flag:"🇸🇳",
+name:"Senegal",
+capital:"Dakar",
+fact:"Known for hospitality, culture, and innovation."
+},
+
+{
+flag:"🇳🇬",
+name:"Nigeria",
+capital:"Abuja",
+fact:"Africa's largest population and major technology hub."
+},
+
+{
+flag:"🇰🇪",
+name:"Kenya",
+capital:"Nairobi",
+fact:"Leader in mobile banking and digital innovation."
+},
+
+{
+flag:"🇿🇦",
+name:"South Africa",
+capital:"Pretoria",
+fact:"One of Africa's most industrialized economies."
+},
+
+{
+flag:"🇲🇦",
+name:"Morocco",
+capital:"Rabat",
+fact:"Famous for history, trade, and renewable energy projects."
+}
+
+];
+
+function updateCountry(){
+
+let random =
+Math.floor(Math.random() * countries.length);
+
+let country = countries[random];
+
+document.getElementById("countryFlag").innerHTML =
+country.flag;
+
+document.getElementById("countryName").innerHTML =
+country.name;
+
+document.getElementById("countryCapital").innerHTML =
+"Capital: " + country.capital;
+
+document.getElementById("countryFact").innerHTML =
+country.fact;
+
+}
+
+updateCountry();
+    
+        <script>
+
+function updateClock(){
+
+    let now = new Date();
+
+    document.getElementById("clock").innerHTML =
+    now.toLocaleTimeString();
+
+}
+
+function updateWorldClocks(){
+
+    document.getElementById("melbourneClock").innerHTML =
+    new Date().toLocaleTimeString(
+        "en-AU",
+        {timeZone:"Australia/Melbourne"}
+    );
+
+    document.getElementById("dakarClock").innerHTML =
+    new Date().toLocaleTimeString(
+        "en-GB",
+        {timeZone:"Africa/Dakar"}
+    );
+
+    document.getElementById("makkahClock").innerHTML =
+    new Date().toLocaleTimeString(
+        "en-GB",
+        {timeZone:"Asia/Riyadh"}
+    );
+
+}
+
+function updateNextPrayer(){
+
+    let hour = new Date().getHours();
+
+    let text = "";
+
+    if(hour < 5){
+
+        text = "🌅 Next Prayer: Fajr";
+
+    }else if(hour < 12){
+
+        text = "☀️ Next Prayer: Dhuhr";
+
+    }else if(hour < 15){
+
+        text = "🌤 Next Prayer: Asr";
+
+    }else if(hour < 18){
+
+        text = "🌇 Next Prayer: Maghrib";
+
+    }else{
+
+        text = "🌙 Next Prayer: Isha";
+
+    }
+
+    document.getElementById("nextPrayer").innerHTML = text;
+
+} 
+            const aiNewsList = [
+"AI is changing education worldwide.",
+"New AI tools help creators work faster.",
+"Automation is growing across industries."
+];
+
+const africaNewsList = [
+"African startups attract new investors.",
+"Technology hubs continue expanding.",
+"Digital innovation is accelerating."
+];
+
+const businessNewsList = [
+"Online businesses continue growing.",
+"Affiliate marketing gains popularity.",
+"Freelancing opportunities are increasing."
+];
+
+const islamicNewsList = [
+"Islamic education reaches more students online.",
+"Digital Quran learning expands globally.",
+"New Islamic knowledge platforms are emerging."
+];
+
+function updateNews(){
+
+document.getElementById("aiNews").innerHTML =
+aiNewsList[Math.floor(Math.random()*aiNewsList.length)];
+
+document.getElementById("africaNews").innerHTML =
+africaNewsList[Math.floor(Math.random()*africaNewsList.length)];
+
+document.getElementById("businessNews").innerHTML =
+businessNewsList[Math.floor(Math.random()*businessNewsList.length)];
+
+document.getElementById("islamicNews").innerHTML =
+islamicNewsList[Math.floor(Math.random()*islamicNewsList.length)];
+
+}
+
+updateNews();
+
+setInterval(updateNews,10000);
+
+setInterval(updateClock,1000);
+setInterval(updateWorldClocks,1000);
+setInterval(updateNextPrayer,1000);
+
+updateClock();
+updateWorldClocks();
+updateNextPrayer();
+
+</script>
+            
+
+
+    
+
+
+
+
+
+
 
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
     
