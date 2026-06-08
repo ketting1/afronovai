@@ -1,1 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="AfroNova Hub - AI, Learning, Business, Technology and African Innovation. Empowering Africa and the world through knowledge, digital opportunities, and entrepreneurship.">
+    <meta name="keywords" content="Africa, AI, Learning, Business, Technology, Innovation, AfroNova, digital skills, freelancing, marketplace">
+    <meta name="author" content="AfroNova Hub">
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="AfroNova Hub">
+    <meta property="og:description" content="AI, Learning & African Innovation – Empowering Africa through technology, education, and entrepreneurship.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://afronovahub.com">
+    <title>AfroNova Hub | AI, Learning & African Innovation</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f9faf8;
+            color: #1e2a2e;
+            line-height: 1.5;
+            transition: background 0.3s, color 0.2s;
+        }
+        /* Dark mode styles */
+        body.dark-mode {
+            background: #121212;
+            color: #e0e0e0;
+        }
+        body.dark-mode .card {
+            background: #1f2a1f;
+            color: #f0f0e0;
+            border-color: #2e3b2e;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+        body.dark-mode .stat {
+            background: #1f2a1f;
+            color: #f0f0e0;
+        }
+        body.dark-mode .hero {
+            background: linear-gradient(135deg, #1e3c2c, #2a4a2a);
+            color: #fef7e0;
+        }
+        body.dark-mode .announcement {
+            background: #2e3b2a;
+            color: #ffecb3;
+        }
+        body.dark-mode button, body.dark-mode .hero-buttons button {
+            background: #ffb347;
+            color: #1e2a1e;
+        }
+        body.dark-mode .language-bar {
+            background: #0f2a1f;
+            border-bottom-color: #ffb347;
+        }
+        body.dark-mode nav {
+            background: #0a1f15;
+        }
+        body.dark-mode footer {
+            background: #0a1f15;
+        }
+        body.dark-mode .country-explorer #countryResult {
+            background: #2a3525;
+            color: #ffefcf;
+        }
+        body.dark-mode .quote-card {
+            background: #1f2a1f;
+            color: #ffdf8c;
+        }
+        body.dark-mode .flags-grid .flag-item {
+            background: #2a3525;
+            color: white;
+        }
+        /* Language bar */
+        .language-bar {
+            background: #1e3c2c;
+            padding: 12px 16px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            border-bottom: 2px solid #ffd966;
+        }
+        .language-bar button {
+            background: #2d5a3f;
+            color: white;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 0.9rem;
+        }
+        .language-bar button:hover {
+            background: #ffb347;
+            color: #1e3c2c;
+            transform: scale(0.98);
+        }
+        nav {
+            background: #0f2a1f;
+            padding: 14px 20px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        nav a {
+            color: #f5f0d7;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: 0.2s;
+            padding: 5px 8px;
+        }
+        nav a:hover { color: #ffcf4a; border-bottom: 2px solid #ffcf4a; }
+        .user-links {
+            display: flex;
+            gap: 15px;
+            margin-left: auto;
+        }
+        .user-links a {
+            background: #ffb347;
+            color: #1e3c2c;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .user-links a:hover {
+            background: #ffcf4a;
+            transform: scale(0.98);
+            border-bottom: none;
+        }
+        /* Search bar */
+        .search-bar {
+            display: inline-flex;
+            background: white;
+            border-radius: 60px;
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: 10px;
+        }
+        .search-bar input {
+            border: none;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            width: 180px;
+            outline: none;
+        }
+        .search-bar button {
+            background: #ffb347;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #1e2a1e;
+        }
+        body.dark-mode .search-bar {
+            background: #2e3b2e;
+        }
+        body.dark-mode .search-bar input {
+            background: #2e3b2e;
+            color: white;
+        }
+        /* Hero with animation */
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 50px 20px 40px;
+            background: linear-gradient(135deg, #eef5e6 0%, #d9e6cf 100%);
+            border-radius: 0 0 40px 40px;
+            transition: background 0.2s;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,180,70,0.15) 1%, transparent 1%);
+            background-size: 40px 40px;
+            animation: moveParticles 30s linear infinite;
+            z-index: -1;
+        }
+        @keyframes moveParticles {
+            0% { transform: translate(0,0); }
+            100% { transform: translate(40px, 40px); }
+        }
+        .hero::after {
+            content: "🌍";
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 80px;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: -1;
+            animation: glow 4s ease-in-out infinite;
+        }
+        @keyframes glow {
+            0% { opacity: 0.05; transform: scale(1);}
+            50% { opacity: 0.2; transform: scale(1.05);}
+            100% { opacity: 0.05; transform: scale(1);}
+        }
+        .logo {
+            max-width: 100px;
+            margin-bottom: 10px;
+            background: #f5f0d7;
+            border-radius: 60px;
+            padding: 8px;
+            position: relative;
+            z-index: 1;
+        }
+        #typing-title {
+            font-size: 2.2rem;
+            min-height: 4rem;
+            color: #1e3c2c;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+        }
+        body.dark-mode #typing-title {
+            color: #ffdf8c;
+        }
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-stats div {
+            background: rgba(255,255,240,0.8);
+            backdrop-filter: blur(5px);
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #1e3c2c;
+        }
+        body.dark-mode .hero-stats div {
+            background: #1f2a1f;
+            color: #ffdf8c;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 25px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        /* Mission section */
+        .mission-card {
+            max-width: 900px;
+            margin: 40px auto;
+            text-align: center;
+            background: white;
+            border-radius: 32px;
+            padding: 32px 24px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+        }
+        body.dark-mode .mission-card {
+            background: #1f2a1f;
+        }
+        /* Featured Tools */
+        .featured-tools {
+            margin: 40px 20px;
+        }
+        .featured-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 20px;
+        }
+        .tool-card {
+            background: white;
+            border-radius: 32px;
+            padding: 28px 20px;
+            text-align: center;
+            flex: 1 1 180px;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid #e9ece5;
+        }
+        .tool-card:hover {
+            transform: translateY(-8px);
+            background: #ffb34720;
+            border-color: #ffb347;
+        }
+        .tool-card h3 { margin-bottom: 10px; font-size: 1.3rem; }
+        .tool-card p { font-size: 0.85rem; opacity: 0.8; }
+        body.dark-mode .tool-card {
+            background: #1f2a1f;
+            color: #f0f0e0;
+        }
+        /* Quote card */
+        .quote-card {
+            background: #fffaf0;
+            border-radius: 40px;
+            padding: 24px 30px;
+            margin: 30px auto;
+            max-width: 700px;
+            text-align: center;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+            border-left: 8px solid #ffb347;
+        }
+        #quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            font-weight: 500;
+        }
+        /* Flags grid */
+        .flags-section {
+            margin: 40px 20px;
+            text-align: center;
+        }
+        .flags-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .flag-item {
+            background: white;
+            padding: 12px;
+            border-radius: 20px;
+            font-size: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .flag-item span {
+            display: block;
+            font-size: 0.7rem;
+            margin-top: 5px;
+            color: inherit;
+        }
+        .flag-item:hover {
+            transform: scale(1.05);
+            background: #ffb34720;
+        }
+        body.dark-mode .flag-item {
+            background: #2a3525;
+        }
+        button, .hero-buttons button {
+            background: #1e3c2c;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+        button:hover {
+            background: #ffb347;
+            color: #0f2a1f;
+            transform: translateY(-2px);
+        }
+        .dashboard, .stats, .cards, .world-clocks, .marketplace .cards, .creators .cards, .islamic-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin: 30px 20px;
+        }
+        .card {
+            background: white;
+            padding: 24px 20px;
+            border-radius: 28px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+            flex: 1 1 240px;
+            transition: all 0.2s ease;
+            border: 1px solid #e9ece5;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 30px rgba(0,0,0,0.1); }
+        .stat {
+            text-align: center;
+            background: white;
+            padding: 18px 20px;
+            border-radius: 32px;
+            min-width: 130px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+        }
+        .clock-section, .world-clocks, .featured-country, .impact-section, .news-feed, .marketplace, .creators, .ai-section, .prayer-times, .islamic-section {
+            margin: 40px 20px;
+        }
+        .announcement {
+            background: #ffecb3;
+            padding: 14px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 40px;
+            margin: 20px;
+        }
+        input {
+            padding: 12px 18px;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 60px;
+            border: 1px solid #ccc;
+            margin: 12px auto;
+            display: inline-block;
+        }
+        footer {
+            background: #0f2a1f;
+            color: #e9f0e3;
+            text-align: center;
+            padding: 32px 20px;
+            margin-top: 40px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin: 15px 0 10px;
+        }
+        .footer-links a {
+            color: #ffdf8c;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .featured-country .card, .country-explorer .card, .prayer-times .card {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .country-explorer {
+            margin: 30px 20px;
+            text-align: center;
+        }
+        .prayer-times .card {
+            background: white;
+        }
+        body.dark-mode .prayer-times .card {
+            background: #1f2a1f;
+        }
+        #prayerTimings {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        .coming-soon {
+            display: inline-block;
+            background: #ffb347;
+            color: #1e3c2c;
+            font-size: 0.7rem;
+            padding: 3px 10px;
+            border-radius: 30px;
+            margin-left: 8px;
+            font-weight: bold;
+        }
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #1e3c2c;
+            border-radius: 60px;
+            padding: 10px 18px;
+            z-index: 999;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .back-to-top {
+            bottom: 90px;
+            background: #2d5a3f;
+        }
+        body.dark-mode .floating-btn {
+            background: #ffb347;
+            color: #0f2a1f;
+        }
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1e3c2c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            font-size: 2rem;
+            color: #ffdf8c;
+            transition: opacity 0.5s;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .loader-spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid #ffdf8c;
+            border-top: 6px solid #ffb347;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @media (max-width: 780px) {
+            .hero h1 { font-size: 1.8rem; }
+            #typing-title { font-size: 1.6rem; }
+            .floating-btn { padding: 8px 14px; font-size: 0.8rem; }
+            .back-to-top { bottom: 80px; }
+            .search-bar input { width: 120px; }
+            .user-links { margin-left: 0; }
+        }
+    </style>
+    <script>
+        const typingText = "Learn. Create. Build The Future.";
+        let typingIndex = 0;
+        function typeWriter() {
+            const titleEl = document.getElementById("typing-title");
+            if (titleEl && typingIndex < typingText.length) {
+                titleEl.innerHTML += typingText.charAt(typingIndex);
+                typingIndex++;
+                setTimeout(typeWriter, 75);
+            }
+        }
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            if (loader) {
+                setTimeout(() => {
+                    loader.style.opacity = '0';
+                    setTimeout(() => { loader.style.display = 'none'; }, 500);
+                }, 300);
+            }
+        });
+    </script>
+</head>
+<body>
 
+<div id="loader">
+    <div class="loader-spinner"></div>
+    <div>🌍 AfroNova Loading...</div>
+</div>
+
+<div id="google_translate_element" style="display: none;"></div>
+
+<div class="language-bar">
+    <button onclick="translatePage('en')">🇬🇧 English</button>
+    <button onclick="translatePage('fr')">🇫🇷 Français</button>
+    <button onclick="translatePage('ar')">🇸🇦 العربية</button>
+    <button onclick="translatePage('pt')">🇵🇹 Português</button>
+    <button onclick="translatePage('sw')">🇰🇪 Kiswahili</button>
+    <button onclick="translatePage('es')">🇪🇸 Español</button>
+</div>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="ai-tools.html">🤖 AI Tools</a>
+    <a href="learning.html">📚 Learning</a>
+    <a href="marketplace.html">🛒 Marketplace</a>
+    <a href="afronova-assistant.html">✨ AfroNova AI</a>
+    <a href="contact.html">📞 Contact</a>
+    <div class="search-bar">
+        <input type="text" id="siteSearch" placeholder="Search AfroNova...">
+        <button onclick="performSearch()">🔍</button>
+    </div>
+    <div class="user-links">
+        <a href="login.html">👤 Login</a>
+        <a href="register.html">📝 Register</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <img src="logo.png" alt="AfroNova Hub Logo" class="logo" onerror="this.style.display='none'">
+    <h2>🌍 AfroNova Hub</h2>
+    <h1 id="typing-title"></h1>
+    <p>Empowering Africa and the world through knowledge, technology, AI innovation, entrepreneurship, and digital opportunities.</p>
+    <div class="hero-stats">
+        <div>🌍 54 Countries</div>
+        <div>🤖 100+ AI Tools</div>
+        <div>📚 50+ Learning Resources</div>
+    </div>
+    <div class="hero-buttons">
+        <a href="learning.html"><button>🚀 Explore Resources</button></a>
+        <a href="contact.html"><button>👥 Join Community</button></a>
+    </div>
+</section>
+
+<!-- Our Mission Section -->
+<div class="mission-card">
+    <h2>🚀 Our Mission</h2>
+    <p>AfroNova Hub empowers Africa through AI, education, entrepreneurship and technology. Our goal is to connect millions of learners, creators and innovators across the continent, bridging the digital divide and fostering sustainable growth.</p>
+</div>
+
+<!-- Featured Tools -->
+<section class="featured-tools">
+    <h2 style="text-align: center;">🌟 Featured Tools</h2>
+    <div class="featured-grid">
+        <div class="tool-card" onclick="location.href='afronova-assistant.html'">
+            <h3>🤖 AfroNova AI</h3>
+            <p>Chat with our intelligent assistant</p>
+        </div>
+        <div class="tool-card" onclick="location.href='learning.html'">
+            <h3>📚 Free Coding Course</h3>
+            <p>Learn web dev & AI from scratch</p>
+        </div>
+        <div class="tool-card" onclick="location.href='learning.html'">
+            <h3>💼 Business Toolkit</h3>
+            <p>Freelancing & marketing guides</p>
+        </div>
+        <div class="tool-card" onclick="document.getElementById('prayer-times-section').scrollIntoView({behavior:'smooth'})">
+            <h3>🕌 Prayer Times</h3>
+            <p>Accurate daily prayer schedule</p>
+        </div>
+        <div class="tool-card" onclick="document.getElementById('flags-section').scrollIntoView({behavior:'smooth'})">
+            <h3>🌍 Africa Explorer</h3>
+            <p>Discover 50+ African nations</p>
+        </div>
+    </div>
+</section>
+
+<section class="quote-card">
+    <h2>💡 Quote of the Day</h2>
+    <p id="quote"></p>
+</section>
+
+<div class="dashboard">
+    <div class="card"><h2>📘 Learning</h2><p>Learn HTML, CSS, JavaScript, AI, and digital skills.</p></div>
+    <div class="card"><h2>🌍 Africa</h2><p>Explore African culture, innovation, opportunities, and history.</p></div>
+    <div class="card"><h2>⚡ Technology</h2><p>Discover AI tools, automation, coding, and future technology.</p></div>
+    <div class="card"><h2>💼 Business</h2><p>Business ideas, affiliate marketing, freelancing, and online income.</p></div>
+</div>
+
+<section class="stats">
+    <div class="stat"><h2>100+</h2><p>AI Tools</p></div>
+    <div class="stat"><h2>50+</h2><p>Learning Resources</p></div>
+    <div class="stat"><h2>20+</h2><p>Business Guides</p></div>
+    <div class="stat"><h2>54</h2><p>African Countries</p></div>
+</section>
+
+<section class="clock-section">
+    <div class="card" style="text-align: center;">
+        <h2>🕒 Current Time</h2>
+        <h1 id="clock" style="font-size: 2.5rem;">--:--:--</h1>
+    </div>
+</section>
+<section class="world-clocks">
+    <div class="card">
+        <h2>🌍 World Clocks</h2>
+        <p>🇦🇺 Melbourne: <span id="melbourneClock">--</span></p>
+        <p>🇸🇳 Dakar: <span id="dakarClock">--</span></p>
+        <p>🇸🇦 Makkah: <span id="makkahClock">--</span></p>
+    </div>
+</section>
+
+<!-- African Country Flags Grid -->
+<section id="flags-section" class="flags-section">
+    <h2>🌍 African Countries</h2>
+    <div class="flags-grid" id="flagsGrid"></div>
+</section>
+
+<section class="featured-country">
+    <div class="card">
+        <h2>🌟 Featured African Country</h2>
+        <h1 id="countryFlag">🇸🇳</h1>
+        <h3 id="countryName">Senegal</h3>
+        <p id="countryCapital">Capital: Dakar</p>
+        <p id="countryFact">Home to vibrant culture, innovation, and one of West Africa's fastest-growing economies.</p>
+    </div>
+</section>
+
+<section class="country-explorer">
+    <div class="card">
+        <h2>🌍 Country Explorer</h2>
+        <input type="text" id="countrySearch" placeholder="Search African country (e.g., Nigeria, Kenya)">
+        <button onclick="searchCountry()">🔍 Search</button>
+        <p id="countryResult">✨ Search for any African nation to discover its capital and fact.</p>
+    </div>
+</section>
+
+<section class="impact-section">
+    <div class="card">
+        <h2>🌍 AfroNova Impact</h2>
+        <h1>54 African Countries</h1>
+        <p>Connecting knowledge, innovation, business, AI and opportunities across Africa.</p>
+        <h3>👥 Community Members: <span id="visitorCount"></span></h3>
+    </div>
+</section>
+
+<!-- Real News Feed with fallback -->
+<section class="news-feed">
+    <h2 style="text-align: center;">📰 Live AfroNova News</h2>
+    <div class="cards" id="realNewsContainer">
+        <div class="card"><h3>🤖 AI News</h3><p id="aiNews">Loading live AI news...</p></div>
+        <div class="card"><h3>🌍 Africa News</h3><p id="africaNews">Fetching latest headlines...</p></div>
+        <div class="card"><h3>💼 Business News</h3><p id="businessNews">Updating...</p></div>
+        <div class="card"><h3>🕌 Islamic News</h3><p id="islamicNews">Loading...</p></div>
+    </div>
+</section>
+
+<section class="announcement">
+    <p>🚀 New: AI tools, business opportunities, learning resources, and creator communities – all in one place.</p>
+</section>
+
+<!-- AfroNova AI Card with Beta Soon badge -->
+<section class="ai-section" style="text-align: center;">
+    <div class="card" style="max-width: 700px; margin: 0 auto;">
+        <h2>💬 Chat with AfroNova AI <span class="coming-soon">Beta Soon</span></h2>
+        <p>Your personal guide for Africa, AI, business, and learning.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 20px 0;">
+            <button onclick="askAIPreset('Tell me about African innovation hubs')">🌍 Ask about Africa</button>
+            <button onclick="askAIPreset('What are the best AI tools for beginners?')">🤖 Ask about AI</button>
+            <button onclick="askAIPreset('How to start freelancing in Africa?')">💼 Ask about Business</button>
+            <button onclick="askAIPreset('Recommend free coding resources')">📚 Ask about Learning</button>
+        </div>
+        <input type="text" id="aiQuestion" placeholder="Or type your own question..." style="width: 90%;">
+        <button onclick="askAI()" style="margin-top: 10px;">✨ Send to AfroNova AI</button>
+        <p style="font-size: 0.75rem; margin-top: 10px;">🔜 Coming soon: Direct AI chat on AfroNova (OpenAI/Gemini integration)</p>
+    </div>
+</section>
+
+<section class="islamic-section">
+    <h2 style="text-align: center;">🕌 Islamic Corner</h2>
+    <div class="islamic-cards">
+        <div class="card"><h3>📖 Quran Learning</h3><p>Interactive Tajweed & Memorization tools.</p><button onclick="alert('Coming soon')">Explore</button></div>
+        <div class="card"><h3>📜 Daily Hadith</h3><p>"The best among you are those who learn the Quran and teach it."</p><button onclick="alert('Hadith feature coming soon')">Read More</button></div>
+        <div class="card"><h3>🌙 Islamic Calendar</h3><p>Ramadan, Eid, and Hijri dates.</p><button onclick="alert('Islamic calendar coming soon')">View</button></div>
+        <div class="card"><h3>🧭 Qibla Direction</h3><p>Find accurate prayer direction.</p><button onclick="alert('Qibla finder coming soon')">Find Qibla</button></div>
+    </div>
+</section>
+
+<section class="cards">
+    <div class="card"><h3>🤖 AI Tools</h3><p>Explore the best AI tools.</p><a href="ai-tools.html"><button>Open</button></a></div>
+    <div class="card"><h3>📚 Learning</h3><p>Free resources & tutorials.</p><a href="learning.html"><button>Open</button></a></div>
+    <div class="card"><h3>💼 Business</h3><p>Freelancing, affiliate marketing.</p><a href="learning.html"><button>Open</button></a></div>
+    <div class="card"><h3>🌍 Africa</h3><p>Innovation & opportunities.</p><a href="learning.html"><button>Open</button></a></div>
+</section>
+
+<section class="marketplace">
+    <h2 style="text-align: center;">📚 Knowledge Marketplace</h2>
+    <div class="cards">
+        <div class="card"><h3>🤖 AI & Automation</h3><p>Guides & prompts.</p><a href="learning.html"><button>Open</button></a></div>
+        <div class="card"><h3>💼 Business & Freelancing</h3><p>Grow income.</p><a href="marketplace.html"><button>Open</button></a></div>
+        <div class="card"><h3>📚 Education</h3><p>Courses & resources.</p><a href="marketplace.html"><button>Open</button></a></div>
+        <div class="card"><h3>🌍 African Innovation</h3><p>Ideas & opportunities.</p><a href="marketplace.html"><button>Open</button></a></div>
+    </div>
+</section>
+
+<section class="creators">
+    <h2 style="text-align: center;">🌟 Featured Creators</h2>
+    <div class="cards">
+        <div class="card"><h3>👤 Amina Diallo <span class="coming-soon">Coming Soon</span></h3><p>AI Specialist</p><button onclick="alert('Profile launching soon')">Connect</button></div>
+        <div class="card"><h3>👤 Ibrahim Kamara <span class="coming-soon">Coming Soon</span></h3><p>Business Mentor</p><button onclick="alert('Profile launching soon')">Connect</button></div>
+        <div class="card"><h3>👤 Fatou Ndiaye <span class="coming-soon">Coming Soon</span></h3><p>Digital Creator</p><button onclick="alert('Profile launching soon')">Connect</button></div>
+    </div>
+</section>
+
+<!-- Prayer Times with Real API -->
+<section id="prayer-times-section" class="prayer-times">
+    <div class="card">
+        <h2>🕌 Prayer Times (Dakar, Senegal)</h2>
+        <div id="prayerTimings">
+            <p>🌅 Fajr: --:--</p>
+            <p>☀️ Dhuhr: --:--</p>
+            <p>🌤 Asr: --:--</p>
+            <p>🌇 Maghrib: --:--</p>
+            <p>🌙 Isha: --:--</p>
+        </div>
+        <hr>
+        <h3 id="nextPrayer">⏳ Calculating next prayer...</h3>
+        <p style="font-size: 0.8rem; margin-top: 10px;">📍 Live from Aladhan API</p>
+    </div>
+</section>
+
+<button class="floating-btn" onclick="toggleTheme()">🌓 Dark/Light</button>
+<button class="floating-btn back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆ Back to Top</button>
+
+<footer>
+    <h3>🌍 AfroNova Hub</h3>
+    <p>🌍 Learn • 🤖 Create • 🚀 Grow • 💡 Build The Future</p>
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">About AfroNova</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <p style="font-size: 0.8rem; margin-top: 10px;">© <span id="currentYear"></span> AfroNova — Connecting Innovation Across Africa & Beyond</p>
+</footer>
+
+<script>
+    // Dynamic year
+    document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+
+    // Dynamic visitor counter (static but with random offset)
+    const visitorBase = 1247;
+    const randomOffset = Math.floor(Math.random() * 150);
+    document.getElementById("visitorCount").innerHTML = (visitorBase + randomOffset).toLocaleString();
+
+    // Clocks
+    function updateClock() {
+        const now = new Date();
+        const clockEl = document.getElementById("clock");
+        if (clockEl) clockEl.innerHTML = now.toLocaleTimeString([], { hour:'2-digit', minute:'2-digit', second:'2-digit' });
+        setTimeout(updateClock, 1000);
+    }
+    function updateWorldClocks() {
+        const melbEl = document.getElementById("melbourneClock");
+        const dakarEl = document.getElementById("dakarClock");
+        const makkahEl = document.getElementById("makkahClock");
+        if (melbEl) melbEl.innerHTML = new Date().toLocaleTimeString("en-AU", { timeZone: "Australia/Melbourne", hour:'2-digit', minute:'2-digit', second:'2-digit' });
+        if (dakarEl) dakarEl.innerHTML = new Date().toLocaleTimeString("en-GB", { timeZone: "Africa/Dakar", hour:'2-digit', minute:'2-digit', second:'2-digit' });
+        if (makkahEl) makkahEl.innerHTML = new Date().toLocaleTimeString("en-GB", { timeZone: "Asia/Riyadh", hour:'2-digit', minute:'2-digit', second:'2-digit' });
+        setTimeout(updateWorldClocks, 1000);
+    }
+    function updateNextPrayer() {
+        const hour = new Date().getHours();
+        let prayerMsg = "";
+        if (hour < 5) prayerMsg = "🌅 Next Prayer: Fajr";
+        else if (hour < 12) prayerMsg = "☀️ Next Prayer: Dhuhr";
+        else if (hour < 15) prayerMsg = "🌤 Next Prayer: Asr";
+        else if (hour < 18) prayerMsg = "🌇 Next Prayer: Maghrib";
+        else prayerMsg = "🌙 Next Prayer: Isha";
+        document.getElementById("nextPrayer").innerHTML = prayerMsg;
+        setTimeout(updateNextPrayer, 1000);
+    }
+
+    // Real Prayer Times from Aladhan API
+    async function fetchPrayerTimes() {
+        try {
+            const response = await fetch("https://api.aladhan.com/v1/timingsByCity?city=Dakar&country=Senegal&method=2");
+            const data = await response.json();
+            const timings = data.data.timings;
+            document.getElementById("prayerTimings").innerHTML = `
+                <p>🌅 Fajr: ${timings.Fajr}</p>
+                <p>☀️ Dhuhr: ${timings.Dhuhr}</p>
+                <p>🌤 Asr: ${timings.Asr}</p>
+                <p>🌇 Maghrib: ${timings.Maghrib}</p>
+                <p>🌙 Isha: ${timings.Isha}</p>
+            `;
+        } catch (error) {
+            console.error("Prayer times error:", error);
+            document.getElementById("prayerTimings").innerHTML = `<p>⚠️ Could not load prayer times. Using demo data.</p>
+                <p>🌅 Fajr: 5:10 AM</p><p>☀️ Dhuhr: 12:30 PM</p><p>🌤 Asr: 3:45 PM</p><p>🌇 Maghrib: 6:15 PM</p><p>🌙 Isha: 7:45 PM</p>`;
+        }
+    }
+
+    // Country flags grid (fixed alert bug)
+    const africanFlags = [
+        "🇸🇳","🇳🇬","🇰🇪","🇬🇭","🇪🇹","🇿🇦","🇲🇦","🇷🇼","🇹🇿","🇺🇬","🇨🇮","🇪🇬",
+        "🇩🇿","🇦🇴","🇨🇲","🇨🇩","🇬🇳","🇲🇱","🇳🇪","🇸🇴","🇸🇩","🇹🇳","🇿🇲","🇿🇼"
+    ];
+    const countryNames = [
+        "Senegal","Nigeria","Kenya","Ghana","Ethiopia","South Africa","Morocco","Rwanda","Tanzania","Uganda","Ivory Coast","Egypt",
+        "Algeria","Angola","Cameroon","DR Congo","Guinea","Mali","Niger","Somalia","Sudan","Tunisia","Zambia","Zimbabwe"
+    ];
+    function buildFlagsGrid() {
+        const grid = document.getElementById("flagsGrid");
+        if (!grid) return;
+        grid.innerHTML = "";
+        africanFlags.forEach((flag, idx) => {
+            const div = document.createElement("div");
+            div.className = "flag-item";
+            div.innerHTML = `${flag}<span>${countryNames[idx]}</span>`;
+            div.onclick = () => alert(`${flag} Explore ${countryNames[idx]} – more details coming soon!`);
+            grid.appendChild(div);
+        });
+    }
+
+    const countriesList = [
+        { flag: "🇸🇳", name: "Senegal", capital: "Dakar", fact: "Known for hospitality, vibrant music, and the African Renaissance Monument." },
+        { flag: "🇳🇬", name: "Nigeria", capital: "Abuja", fact: "Africa's largest economy & Nollywood powerhouse." },
+        { flag: "🇰🇪", name: "Kenya", capital: "Nairobi", fact: "Leader in mobile banking (M-Pesa) and tech innovation." },
+        { flag: "🇿🇦", name: "South Africa", capital: "Pretoria", fact: "Diverse culture, renewable energy pioneer." },
+        { flag: "🇲🇦", name: "Morocco", capital: "Rabat", fact: "Rich history, renewable energy projects." },
+        { flag: "🇬🇭", name: "Ghana", capital: "Accra", fact: "Stable democracy and rising tech startup ecosystem." },
+        { flag: "🇪🇬", name: "Egypt", capital: "Cairo", fact: "Ancient civilization and growing digital economy." },
+        { flag: "🇷🇼", name: "Rwanda", capital: "Kigali", fact: "Innovation hub & leading gender parity." }
+    ];
+    function updateFeaturedCountry() {
+        const rand = Math.floor(Math.random() * countriesList.length);
+        const c = countriesList[rand];
+        document.getElementById("countryFlag").innerHTML = c.flag;
+        document.getElementById("countryName").innerHTML = c.name;
+        document.getElementById("countryCapital").innerHTML = "Capital: " + c.capital;
+        document.getElementById("countryFact").innerHTML = c.fact;
+        setTimeout(updateFeaturedCountry, 10000);
+    }
+    window.searchCountry = function() {
+        const query = document.getElementById("countrySearch").value.trim().toLowerCase();
+        const res = document.getElementById("countryResult");
+        if (!query) { res.innerHTML = "🔍 Enter a country name."; return; }
+        const match = countriesList.find(c => c.name.toLowerCase() === query);
+        if (match) res.innerHTML = `${match.flag} <strong>${match.name}</strong><br>🏛️ Capital: ${match.capital}<br>📌 ${match.fact}`;
+        else res.innerHTML = "❌ Not found. Try Nigeria, Kenya, Ghana, etc.";
+    };
+
+    // Real News with fallback
+    async function fetchRealNews() {
+        const sources = {
+            ai: "https://rss2json.com/api.json?rss_url=https%3A%2F%2Ftechcrunch.com%2Fcategory%2Fartificial-intelligence%2Ffeed%2F",
+            africa: "https://rss2json.com/api.json?rss_url=https%3A%2F%2Ffeeds.bbci.co.uk%2Fnews%2Fworld%2Fafrica%2Frss.xml",
+            business: "https://rss2json.com/api.json?rss_url=https%3A%2F%2Ffeeds.bloomberg.com%2Fmarkets%2Fnews.rss",
+            islamic: "https://rss2json.com/api.json?rss_url=https%3A%2F%2Faboutislam.net%2Ffeed%2F"
+        };
+        try {
+            const aiRes = await fetch(sources.ai);
+            const aiData = await aiRes.json();
+            document.getElementById("aiNews").innerHTML = (aiData.items && aiData.items[0]) ? aiData.items[0].title.substring(0, 100) : "Latest AI innovations transforming education and business.";
+            
+            const afRes = await fetch(sources.africa);
+            const afData = await afRes.json();
+            document.getElementById("africaNews").innerHTML = (afData.items && afData.items[0]) ? afData.items[0].title.substring(0, 100) : "African startups continue attracting global investment.";
+            
+            const bizRes = await fetch(sources.business);
+            const bizData = await bizRes.json();
+            document.getElementById("businessNews").innerHTML = (bizData.items && bizData.items[0]) ? bizData.items[0].title.substring(0, 100) : "Digital entrepreneurship is growing across Africa.";
+            
+            const isRes = await fetch(sources.islamic);
+            const isData = await isRes.json();
+            document.getElementById("islamicNews").innerHTML = (isData.items && isData.items[0]) ? isData.items[0].title.substring(0, 100) : "Islamic educational initiatives continue expanding globally.";
+        } catch(e) {
+            console.warn("News fetch failed, using fallback", e);
+            document.getElementById("aiNews").innerHTML = "AI reshaping industries globally.";
+            document.getElementById("africaNews").innerHTML = "African startups break records.";
+            document.getElementById("businessNews").innerHTML = "Digital economy surges across Africa.";
+            document.getElementById("islamicNews").innerHTML = "Islamic finance continues growth.";
+        }
+    }
+
+    // Quote rotator
+    const quotes = ["“Knowledge is power. Africa's future is built by creators.”","“Learn today, lead tomorrow.”","“Innovation begins with curiosity.”","“The best way to predict the future is to create it.”","“Empower an African mind, empower a continent.”"];
+    let qIdx = 0;
+    function rotateQuote() {
+        document.getElementById("quote").innerHTML = quotes[qIdx];
+        qIdx = (qIdx+1)%quotes.length;
+        setTimeout(rotateQuote, 8000);
+    }
+
+    // Expanded search mapping
+    const pageMap = {
+        ai: "ai-tools.html",
+        tools: "ai-tools.html",
+        learning: "learning.html",
+        courses: "learning.html",
+        business: "marketplace.html",
+        marketplace: "marketplace.html",
+        africa: "index.html",
+        prayer: "#prayer-times-section",
+        contact: "contact.html"
+    };
+    function performSearch() {
+        let query = document.getElementById("siteSearch").value.trim().toLowerCase();
+        if (!query) { alert("Enter a search term"); return; }
+        for (let key in pageMap) {
+            if (query.includes(key)) {
+                const target = pageMap[key];
+                if (target.startsWith("#")) {
+                    document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    window.location.href = target;
+                }
+                return;
+            }
+        }
+        alert(`🔍 "${query}" – try: AI, learning, marketplace, business, africa, prayer`);
+    }
+    window.askAI = function() {
+        const q = document.getElementById("aiQuestion").value.trim();
+        if (q) window.location.href = "afronova-assistant.html?q=" + encodeURIComponent(q);
+        else alert("Type a question");
+    };
+    window.askAIPreset = function(question) {
+        document.getElementById("aiQuestion").value = question;
+        askAI();
+    };
+    window.translatePage = function(langCode) {
+        const sb = document.querySelector('.goog-te-combo');
+        if (sb) { sb.value = langCode; sb.dispatchEvent(new Event('change')); }
+        else setTimeout(() => window.translatePage(langCode), 500);
+    };
+    function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+        localStorage.setItem("afronovaTheme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    }
+    function loadTheme() {
+        if (localStorage.getItem("afronovaTheme") === "dark") document.body.classList.add("dark-mode");
+    }
+    window.googleTranslateElementInit = function() {
+        new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'google_translate_element');
+    };
+    window.addEventListener('DOMContentLoaded', () => {
+        typeWriter();
+        updateClock();
+        updateWorldClocks();
+        updateNextPrayer();
+        fetchPrayerTimes();
+        buildFlagsGrid();
+        updateFeaturedCountry();
+        fetchRealNews();
+        setInterval(fetchRealNews, 60000);
+        rotateQuote();
+        loadTheme();
+    });
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
