@@ -393,7 +393,17 @@ window.onload = typeWriter;
             ⏳ Calculating...
         </h3>
 
-    </div>
+    </div> 
+                let visitors = 1000;
+
+setInterval(() => {
+
+    visitors++;
+
+    document.getElementById("visitorCount").innerHTML =
+    visitors.toLocaleString();
+
+}, 5000);
 
 </section>
  
