@@ -3,6 +3,101 @@
 <head>
     <title>Learning Center - AfroNova Hub</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom styles to match your dark theme */
+        .course-card, .credential-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 25px;
+            color: #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            width: 100%; /* Keeps it inside the screen */
+            box-sizing: border-box;
+        }
+        .course-card h3, .credential-card h3 {
+            color: #ffffff;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        .course-card p, .credential-card p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge-blue { background: #1e3a8a; color: #93c5fd; }
+        .badge-red { background: #7f1d1d; color: #fca5a5; }
+        .badge-purple { background: #4c1d95; color: #d8b4fe; }
+        .badge-green { background: #064e3b; color: #6ee7b7; }
+        .badge-orange { background: #7c2d12; color: #fdba74; }
+        
+        .btn-access {
+            display: inline-block; 
+            margin-top: auto; 
+            background: #3b82f6; 
+            color: #ffffff; 
+            padding: 12px 20px; 
+            border-radius: 8px; 
+            text-align: center; 
+            text-decoration: none; 
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .btn-access:hover {
+            background: #2563eb;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        /* Accordion Styles for Ethics */
+        details {
+            margin-bottom: 10px; 
+            background: rgba(0,0,0,0.3); 
+            padding: 15px; 
+            border-radius: 8px; 
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        summary {
+            color: #93c5fd; 
+            font-weight: bold; 
+            font-size: 1.05rem;
+            list-style: none; /* hides the default arrow */
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::before {
+            content: "▶ ";
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+        details[open] summary::before {
+            content: "▼ ";
+        }
+    </style>
 </head>
 
 <body> 
@@ -17,133 +112,99 @@
 </nav>
 
 <section class="hero">
-
     <h1>📚 Learning Center</h1>
-
-    <p>
-        Learn new skills, technology, business,
-        AI, and digital opportunities.
-    </p>
-
+    <p>Learn new skills, technology, business, AI, and digital opportunities.</p>
 </section>
 
+<!-- ===== ORIGINAL CARDS ===== -->
 <div class="cards">
-
     <div class="card">
         <h3>📖 AI Fundamentals</h3>
         <p>Learn the basics of artificial intelligence.</p>
     </div>
-
     <div class="card">
         <h3>💻 Web Development</h3>
         <p>HTML, CSS, JavaScript and website building.</p>
     </div>
-
-
-    <!-- ===== COURSES SECTION START ===== -->
-<section id="courses" style="padding: 40px 20px; background: #ffffff; font-family: sans-serif;">
-  <div style="max-width: 1100px; margin: 0 auto;">
-    <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 10px; color: #333;">📚 My Courses</h2>
-    <p style="text-align: center; color: #555; margin-bottom: 40px;">Structured learning paths for AI, coding, and digital skills.</p>
-
-    <!-- Course Grid -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-
-      <!-- Course 1 -->
-      <div style="background: #f9f9f9; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
-        <div>
-          <span style="background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">Beginner</span>
-          <h3 style="margin: 15px 0 10px; font-size: 1.3rem;">Web Development Basics</h3>
-          <p style="color: #666; font-size: 0.95rem;">Learn HTML, CSS, and JavaScript from scratch. Build your first website.</p>
-          <ul style="padding-left: 20px; color: #444; font-size: 0.9rem;">
-            <li>HTML5 Structure</li>
-            <li>CSS Styling & Flexbox</li>
-            <li>JavaScript Fundamentals</li>
-          </ul>
-        </div>
-        <a href="contact.html" style="display: inline-block; margin-top: 20px; background: #2563eb; color: #fff; padding: 10px 20px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: bold;">Get Access</a>
-      </div>
-
-      <!-- Course 2 -->
-      <div style="background: #f9f9f9; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
-        <div>
-          <span style="background: #dcfce7; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">Intermediate</span>
-          <h3 style="margin: 15px 0 10px; font-size: 1.3rem;">AI & Machine Learning</h3>
-          <p style="color: #666; font-size: 0.95rem;">Understand the basics of AI, neural networks, and how to use pre-trained models.</p>
-          <ul style="padding-left: 20px; color: #444; font-size: 0.9rem;">
-            <li>What is AI?</li>
-            <li>Python for AI</li>
-            <li>Using ChatGPT & APIs</li>
-          </ul>
-        </div>
-        <a href="contact.html" style="display: inline-block; margin-top: 20px; background: #2563eb; color: #fff; padding: 10px 20px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: bold;">Get Access</a>
-      </div>
-
-      <!-- Course 3 -->
-      <div style="background: #f9f9f9; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
-        <div>
-          <span style="background: #fef9c3; color: #854d0e; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">Business</span>
-          <h3 style="margin: 15px 0 10px; font-size: 1.3rem;">Freelancing & Digital Income</h3>
-          <p style="color: #666; font-size: 0.95rem;">Learn how to find clients, set rates, and build a sustainable online business.</p>
-          <ul style="padding-left: 20px; color: #444; font-size: 0.9rem;">
-            <li>Finding Your Niche</li>
-            <li>Affiliate Marketing Basics</li>
-            <li>Getting Paid Online</li>
-          </ul>
-        </div>
-        <a href="contact.html" style="display: inline-block; margin-top: 20px; background: #2563eb; color: #fff; padding: 10px 20px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: bold;">Get Access</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- ===== COURSES SECTION END ===== -->
-
     <div class="card">
         <h3>📈 Digital Marketing</h3>
         <p>SEO, social media and online business.</p>
     </div>
-
     <div class="card">
         <h3>🎬 Content Creation</h3>
         <p>YouTube, TikTok and video editing skills.</p>
     </div>
-
     <div class="card">
         <h3>💰 Affiliate Marketing</h3>
         <p>Learn how to earn commissions online.</p>
     </div>
-
     <div class="card">
         <h3>🌍 African Innovation</h3>
         <p>Technology, startups and opportunities in Africa.</p>
     </div>
-
 </div>
-    <!-- ===== NEW SUBJECT CARD: ETHICAL AI ===== -->
-<section style="padding: 20px 0 60px 0;">
-    <div class="grid-container" style="grid-template-columns: 1fr;"> <!-- Uses your grid style but full width -->
+
+<!-- ===== PART 1: CORE SKILLS ===== -->
+<section style="padding: 40px 0;">
+    <h2 style="text-align: center; color: white; font-size: 2.2rem; margin-bottom: 10px;">🧠 Core Skills (Deep Dive)</h2>
+    <p style="text-align: center; color: #94a3b8; margin-bottom: 30px;">Detailed paths with full explanations.</p>
+
+    <div class="grid-container">
         
-        <div class="course-card" style="width: 100%;">
+        <div class="course-card">
+            <div>
+                <span class="badge badge-blue">Beginner to Pro</span>
+                <h3>💻 Programming & Software</h3>
+                <p><strong>What you will learn:</strong> Understand the logic behind coding. Start with Python basics, learn how software is built, and solve real-world problems.</p>
+            </div>
+            <a href="contact.html" class="btn-access">Start Learning</a>
+        </div>
+
+        <div class="course-card">
+            <div>
+                <span class="badge badge-red">Security</span>
+                <h3>🛡️ Cybersecurity Basics</h3>
+                <p><strong>What you will learn:</strong> Understand how hackers think and how to protect yourself online. Clear explanations of digital security.</p>
+            </div>
+            <a href="contact.html" class="btn-access">Start Learning</a>
+        </div>
+
+        <div class="course-card">
+            <div>
+                <span class="badge badge-purple">Mindset</span>
+                <h3>🧠 Critical Thinking & Logic</h3>
+                <p><strong>What you will learn:</strong> How to analyze information, make better decisions, and solve complex problems in a world of AI and fake news.</p>
+            </div>
+            <a href="contact.html" class="btn-access">Start Learning</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PART 2: ETHICAL GUIDELINES (NEW SUBJECT) ===== -->
+<section style="padding: 20px 0 60px 0;">
+    <h2 style="text-align: center; color: white; font-size: 2.2rem; margin-bottom: 10px;">🤖 AI Ethics & Guidelines</h2>
+    <p style="text-align: center; color: #94a3b8; margin-bottom: 30px;">Click the modules below to expand and read.</p>
+
+    <div class="grid-container" style="grid-template-columns: 1fr;">
+        
+        <div class="course-card">
             <div>
                 <span class="badge badge-purple">Module 1</span>
-                <h3 style="margin-top: 15px;">🤖 Ethical Guidelines and Use of AI</h3>
+                <h3 style="margin-top: 15px;">Ethical Guidelines and Use of AI</h3>
                 <p>Ethics are the principles that help people decide what is right, fair, and responsible when making decisions and carrying out their work with Artificial Intelligence.</p>
                 
-                <!-- Accordion Style Dropdowns for the content -->
+                <!-- Accordion Dropdowns -->
                 <div style="margin-top: 20px;">
                     
-                    <!-- Section 1 -->
-                    <details style="margin-bottom: 10px; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; cursor: pointer;">
-                        <summary style="color: #93c5fd; font-weight: bold; font-size: 1.1rem;">1. Introduction to AI Ethics</summary>
+                    <details>
+                        <summary>1. Introduction to AI Ethics</summary>
                         <p style="margin-top: 10px; font-size: 0.9rem; color: #cbd5e1;">
                             AI must be fair, safe, transparent, and respectful of human rights. Systems should promote human wellbeing and allow human staff to verify incidents (e.g., before blocking a user's account for suspicious logins). AI should not replace human judgement in important decisions.
                         </p>
                     </details>
 
-                    <!-- Section 2 -->
-                    <details style="margin-bottom: 10px; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; cursor: pointer;">
-                        <summary style="color: #93c5fd; font-weight: bold; font-size: 1.1rem;">2. Australia’s 8 AI Ethics Principles</summary>
+                    <details>
+                        <summary>2. Australia’s 8 AI Ethics Principles</summary>
                         <ul style="margin-top: 10px; font-size: 0.9rem; color: #cbd5e1; padding-left: 20px; line-height: 1.6;">
                             <li><strong>Human wellbeing:</strong> Benefit individuals, society, and environment.</li>
                             <li><strong>Human-centred values:</strong> Respect human rights and diversity.</li>
@@ -156,9 +217,8 @@
                         </ul>
                     </details>
 
-                    <!-- Section 3 -->
-                    <details style="margin-bottom: 10px; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; cursor: pointer;">
-                        <summary style="color: #93c5fd; font-weight: bold; font-size: 1.1rem;">3. IBM’s 5 Pillars of Trust</summary>
+                    <details>
+                        <summary>3. IBM’s 5 Pillars of Trust</summary>
                         <p style="margin-top: 10px; font-size: 0.9rem; color: #cbd5e1;">
                             1. <strong>Fairness</strong> (avoid bias) <br>
                             2. <strong>Explainability</strong> (understand decisions) <br>
@@ -168,27 +228,24 @@
                         </p>
                     </details>
 
-                    <!-- Section 4 -->
-                    <details style="margin-bottom: 10px; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; cursor: pointer;">
-                        <summary style="color: #93c5fd; font-weight: bold; font-size: 1.1rem;">4. Applications in Education & Retail</summary>
+                    <details>
+                        <summary>4. Applications in Education & Retail</summary>
                         <p style="margin-top: 10px; font-size: 0.9rem; color: #cbd5e1;">
                             <strong>Education:</strong> AI should support learning, not do the work for students. Teachers must remain responsible for outcomes and privacy.<br><br>
                             <strong>Retail (e.g., TrendMart):</strong> Using AI for customer service requires auditing for bias, protecting data, and keeping human oversight.
                         </p>
                     </details>
 
-                    <!-- Section 5 -->
-                    <details style="margin-bottom: 10px; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; cursor: pointer;">
-                        <summary style="color: #93c5fd; font-weight: bold; font-size: 1.1rem;">5. International Standards (ISO & UNESCO)</summary>
+                    <details>
+                        <summary>5. International Standards (ISO & UNESCO)</summary>
                         <p style="margin-top: 10px; font-size: 0.9rem; color: #cbd5e1;">
                             <strong>ISO/IEC 42001:</strong> An international standard helping organizations manage AI responsibly (risk management, governance, and continuous improvement).<br><br>
                             <strong>UNESCO & OECD:</strong> Global frameworks promoting human rights, sustainability, and transparency in AI.
                         </p>
                     </details>
 
-                    <!-- Section 6 -->
-                    <details style="margin-bottom: 10px; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 8px; cursor: pointer;">
-                        <summary style="color: #93c5fd; font-weight: bold; font-size: 1.1rem;">6. Australian Legislation & Summary</summary>
+                    <details>
+                        <summary>6. Australian Legislation & Summary</summary>
                         <p style="margin-top: 10px; font-size: 0.9rem; color: #cbd5e1;">
                             Existing laws apply to AI, including the <strong>Privacy Act 1988</strong>, <strong>Copyright Act 1968</strong>, and <strong>Anti-Discrimination Laws</strong>. Currently, most AI guidelines in Australia are voluntary frameworks, meaning organizations must self-regulate and maintain human oversight.
                         </p>
@@ -202,8 +259,6 @@
 
     </div>
 </section>
-<!-- ===== END OF NEW CARD ===== -->
-
 
 <footer>
     <h3>🌍 AfroNova Hub</h3>
